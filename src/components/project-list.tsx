@@ -1,8 +1,15 @@
 import Link from "next/link"
+import type { Locale } from "@/i18n"
 import type { Project } from "@/lib/site"
 
 // 作品列表：不用卡片，每列是一行文字，hover 時淡淡的底色浮現
-export function ProjectList({ projects }: { projects: Project[] }) {
+export function ProjectList({
+  projects,
+  lang,
+}: {
+  projects: Project[]
+  lang: Locale
+}) {
   return (
     <ul className="-mx-3">
       {projects.map((project) => {
@@ -27,7 +34,7 @@ export function ProjectList({ projects }: { projects: Project[] }) {
           <li key={project.title}>
             {project.href ? (
               <Link
-                href={project.href}
+                href={`/${lang}${project.href}`}
                 className={`${rowClass} hover:bg-accent`}
               >
                 {content}
