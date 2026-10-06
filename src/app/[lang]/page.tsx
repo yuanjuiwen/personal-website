@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation"
+import { LocalTime } from "@/components/local-time"
 import { ProjectList } from "@/components/project-list"
 import { Section } from "@/components/section"
 import { SiteControls } from "@/components/site-controls"
@@ -84,8 +85,15 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         </Section>
       </main>
 
-      <footer className="border-border mt-24 border-t pt-6 text-sm">
-        © {new Date().getFullYear()} {c.name}
+      <footer className="border-border mt-24 flex flex-wrap justify-between gap-x-6 gap-y-1 border-t pt-6 text-sm">
+        <LocalTime
+          timeZone={site.timeZone}
+          location={site.location[lang]}
+          locale={lang}
+        />
+        <p>
+          © {new Date().getFullYear()} {c.name}
+        </p>
       </footer>
     </div>
   )

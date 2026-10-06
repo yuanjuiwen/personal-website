@@ -20,6 +20,9 @@ export type Experience = {
 export const site = {
   url: "https://yuanjuiwen.vercel.app",
   email: "hello@example.com",
+  // 頁尾顯示的當地時間依這個時區計算（IANA 時區名稱）
+  timeZone: "Asia/Taipei",
+  location: { zh: "台灣台北", en: "Taipei, Taiwan" },
   links: [
     { label: "LinkedIn", href: "https://www.linkedin.com/" },
     { label: "GitHub", href: "https://github.com/yuanjuiwen" },
