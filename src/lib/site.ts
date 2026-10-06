@@ -48,7 +48,7 @@ type Content = {
 
 export const content: Record<Locale, Content> = {
   zh: {
-    name: "你的名字",
+    name: "文遠睿",
     role: "產品設計師",
     description: "產品設計師的個人作品集",
     intro: [
@@ -93,7 +93,7 @@ export const content: Record<Locale, Content> = {
     },
   },
   en: {
-    name: "Your Name",
+    name: "Yuan-Jui Wen",
     role: "Product Designer",
     description: "Portfolio of a product designer",
     intro: [
