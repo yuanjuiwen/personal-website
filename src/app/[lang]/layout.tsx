@@ -31,7 +31,8 @@ export async function generateMetadata({
   const { lang } = await params
   if (!hasLocale(lang)) return {}
   const c = content[lang]
-  const title = `${c.name} — ${c.role}`
+  // 分頁標題中英版本都使用英文名
+  const title = content.en.name
 
   return {
     metadataBase: new URL(site.url),
